@@ -4,7 +4,7 @@ import './App.css';
 import ThemeToggle from './Components/ThemeToggle';
 import SearchBar from './Components/Searchbar';
 import WeatherCard from './Components/WeatherCard';
-import ForecastCard from './Components/Forecastcard';
+import ForecastCard from './Components/ForecastCard';
 
 const App = () => {
   const [city, setCity] = useState('');
