@@ -1,0 +1,100 @@
+body {
+  transition: background-color 0.3s ease;
+  padding: 20px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+body.light {
+  background-image: url('./assets/clouds-3488632_1280.jpg');
+  color: #096ccf;
+}
+
+body.dark {
+  background-image: url('./assets/waves-7327952_1280.jpg');
+  color: #f8f9fa;
+}
+
+#heading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#search_bar {
+  margin: 20px auto;
+  max-width: 500px;
+}
+#search_bar input {
+  transition: all 0.3s ease;
+}
+
+#search_bar input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.weather_card,
+.future-weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather_card:hover,
+.future-weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather_card,
+.future-weather-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.temp_display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 1.1rem;
+}
+
+.row {
+  justify-content: center;
+}
